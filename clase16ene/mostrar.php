@@ -31,8 +31,10 @@ $videojuegos = mysqli_fetch_all($resultado);
     <?php echo$videojuego[1]; ?>
     <a href="eliminar.php?id=<?php echo $videojuego[0]; ?>">eliminar X</a>
 
-    <input type="text" name="cambiar" >
-    <a href="editar.php?id=<?php echo $videojuego[0]; ?>"> Editar </a>
+       <form action="editar.php" method="get">
+        <input type="text" name="nuevonombre">
+        <a href="editar.php?id=<?php echo $videojuego[0]; ?>"> <button type="submit">Modificar</button> </a>
+    </form>
 </p>
 
 <?php endforeach; ?>
