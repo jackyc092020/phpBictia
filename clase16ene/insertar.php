@@ -8,7 +8,7 @@ require('conexion.php');
 $videojuego = $_GET['videojuego'];
 
 //variable para consultar las tablas mysql
-$sql= "INSERT INTO videojuegos (nombre) VALUES ('videojuego')";
+$sql= "INSERT INTO videojuegos (nombre) VALUES ('$videojuego')";
 
 //enviar datos: conexion + sentencia
 mysqli_query($conexion, $sql);
